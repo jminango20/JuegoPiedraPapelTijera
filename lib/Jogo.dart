@@ -30,13 +30,18 @@ class _JogoState extends State<Jogo> {
               ),
             )
           ),
-          //2) Imagem App
-          Image.asset("imagens/padrao.png"),
+          //2) Imagem App/Gesture Detector
+          GestureDetector(
+            onTap: (){print("Un click en la imagen");},
+            onDoubleTap: (){print("Dos click en la imagen");},
+            onLongPress: (){print("Un click largo en la imagen");},
+            child:Image.asset("imagens/padrao.png"),
+          ),
           //3) Texto Minha escolha
           Padding(
               padding: EdgeInsets.only(top: 32, bottom: 16),
               child: Text(
-                "Escoje la opcion: ",
+                "Escoje la opcion de abajo: ",
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold
